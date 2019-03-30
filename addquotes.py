@@ -2,7 +2,7 @@ import requests, django, sys, os
 sys.path.append(".")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "quotes.settings")
 django.setup()
-from financeData.models import CurrencyQuote
+from financeData.models import QuoteModel
 import datetime
 
 def _get_quotes_json():
@@ -28,7 +28,7 @@ def update_quotes():
             dolar = json['results']['currencies']['USD']['buy']
             euro = json['results']['currencies']['EUR']['buy']
 
-            new_quotes = CurrencyQuote()
+            new_quotes = QuoteModel()
             new_quotes.bitcoin = bitcoin
             new_quotes.euro = euro
             new_quotes.dolar = dolar

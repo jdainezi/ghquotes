@@ -7,5 +7,5 @@ class QuoteViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows currency quotations to be viewed.
     """
-    queryset = models.CurrencyQuote.objects.all()
+    queryset = models.QuoteModel.objects.all()
     serializer_class = serializers.QuoteSerializer

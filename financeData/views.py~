@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets, filters, renderers
-from finance_data import models, serializers
+from financeData import models, serializers
 
 # Create your views here.
 class QuoteViewSet(viewsets.ModelViewSet):
